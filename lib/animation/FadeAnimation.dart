@@ -31,3 +31,6 @@ class FadeAnimation extends StatelessWidget {
     );
   }
 }
+
+class StatelessWidget {
+}
