@@ -1,6 +1,5 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:login_page_day_23/animation/FadeAnimation.dart';
 import 'package:login_page_day_23/login.dart';
 import 'package:login_page_day_23/signup.dart';
 
@@ -28,12 +27,12 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  FadeAnimation(1, Text("Welcome", style: TextStyle(
+                  FadeInUp(duration: Duration(milliseconds: 1000), child:Text("Welcome", style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30
                   ),)),
                   SizedBox(height: 20,),
-                  FadeAnimation(1.2, Text("Automatic identity verification which enables you to verify your identity", 
+                  FadeInUp(duration: Duration(milliseconds: 1200), child: Text("Automatic identity verification which enables you to verify your identity", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.grey[700],
@@ -41,7 +40,7 @@ class HomePage extends StatelessWidget {
                   ),)),
                 ],
               ),
-              FadeAnimation(1.4, Container(
+              FadeInUp(duration: Duration(milliseconds: 1400), child: Container(
                 height: MediaQuery.of(context).size.height / 3,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -51,7 +50,7 @@ class HomePage extends StatelessWidget {
               )),
               Column(
                 children: <Widget>[
-                  FadeAnimation(1.5, MaterialButton(
+                  FadeInUp(duration: Duration(milliseconds: 1500), child: MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
@@ -69,7 +68,7 @@ class HomePage extends StatelessWidget {
                     ),),
                   )),
                   SizedBox(height: 20,),
-                  FadeAnimation(1.6, Container(
+                  FadeInUp(duration: Duration(milliseconds: 1600), child: Container(
                     padding: EdgeInsets.only(top: 3, left: 3),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),

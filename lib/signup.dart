@@ -1,5 +1,5 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:login_page_day_23/animation/FadeAnimation.dart';
 
 class SignupPage extends StatelessWidget {
   @override
@@ -9,7 +9,6 @@ class SignupPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -28,12 +27,12 @@ class SignupPage extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  FadeAnimation(1, Text("Sign up", style: TextStyle(
+                  FadeInUp(duration: Duration(milliseconds: 1000), child: Text("Sign up", style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold
                   ),)),
                   SizedBox(height: 20,),
-                  FadeAnimation(1.2, Text("Create an account, It's free", style: TextStyle(
+                  FadeInUp(duration: Duration(milliseconds: 1200), child: Text("Create an account, It's free", style: TextStyle(
                     fontSize: 15,
                     color: Colors.grey[700]
                   ),)),
@@ -41,12 +40,12 @@ class SignupPage extends StatelessWidget {
               ),
               Column(
                 children: <Widget>[
-                  FadeAnimation(1.2, makeInput(label: "Email")),
-                  FadeAnimation(1.3, makeInput(label: "Password", obscureText: true)),
-                  FadeAnimation(1.4, makeInput(label: "Confirm Password", obscureText: true)),
+                  FadeInUp(duration: Duration(milliseconds: 1200), child: makeInput(label: "Email")),
+                  FadeInUp(duration: Duration(milliseconds: 1300), child: makeInput(label: "Password", obscureText: true)),
+                  FadeInUp(duration: Duration(milliseconds: 1400), child: makeInput(label: "Confirm Password", obscureText: true)),
                 ],
               ),
-              FadeAnimation(1.5, Container(
+              FadeInUp(duration: Duration(milliseconds: 1500), child: Container(
                 padding: EdgeInsets.only(top: 3, left: 3),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
@@ -72,7 +71,7 @@ class SignupPage extends StatelessWidget {
                   ),),
                 ),
               )),
-              FadeAnimation(1.6, Row(
+              FadeInUp(duration: Duration(milliseconds: 1600), child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text("Already have an account?"),
@@ -103,10 +102,10 @@ class SignupPage extends StatelessWidget {
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey[400])
+              borderSide: BorderSide(color: Colors.grey.shade400)
             ),
             border: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey[400])
+              borderSide: BorderSide(color: Colors.grey.shade400)
             ),
           ),
         ),

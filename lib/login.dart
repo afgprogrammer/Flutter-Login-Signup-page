@@ -1,5 +1,5 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:login_page_day_23/animation/FadeAnimation.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -9,7 +9,6 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -30,12 +29,12 @@ class LoginPage extends StatelessWidget {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                      FadeAnimation(1, Text("Login", style: TextStyle(
+                      FadeInUp(duration: Duration(milliseconds: 1000), child: Text("Login", style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold
                       ),)),
                       SizedBox(height: 20,),
-                      FadeAnimation(1.2, Text("Login to your account", style: TextStyle(
+                      FadeInUp(duration: Duration(milliseconds: 1200), child: Text("Login to your account", style: TextStyle(
                         fontSize: 15,
                         color: Colors.grey[700]
                       ),)),
@@ -45,12 +44,12 @@ class LoginPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Column(
                       children: <Widget>[
-                        FadeAnimation(1.2, makeInput(label: "Email")),
-                        FadeAnimation(1.3, makeInput(label: "Password", obscureText: true)),
+                        FadeInUp(duration: Duration(milliseconds: 1200), child: makeInput(label: "Email")),
+                        FadeInUp(duration: Duration(milliseconds: 1300), child: makeInput(label: "Password", obscureText: true)),
                       ],
                     ),
                   ),
-                  FadeAnimation(1.4, Padding(
+                  FadeInUp(duration: Duration(milliseconds: 1400), child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Container(
                       padding: EdgeInsets.only(top: 3, left: 3),
@@ -79,7 +78,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   )),
-                  FadeAnimation(1.5, Row(
+                  FadeInUp(duration: Duration(milliseconds: 1500), child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text("Don't have an account?"),
@@ -91,7 +90,7 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ),
-            FadeAnimation(1.2, Container(
+            FadeInUp(duration: Duration(milliseconds: 1200), child: Container(
               height: MediaQuery.of(context).size.height / 3,
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -121,10 +120,10 @@ class LoginPage extends StatelessWidget {
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey[400])
+              borderSide: BorderSide(color: Colors.grey.shade400)
             ),
             border: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey[400])
+              borderSide: BorderSide(color: Colors.grey.shade400)
             ),
           ),
         ),
